@@ -1,0 +1,80 @@
+body {
+    background-image: url("/img/backgrounds/picture1.jpg");
+    background-size: 100%
+}
+
+
+#namePage {
+    text-transform: capitalize;
+    color: rgba(42, 20, 5, 0.84);
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 350%;
+    font-variant: small-caps;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center;
+    font-family: Bradley Hand, cursive;}
+
+#text {
+    background-color: navajowhite;
+    opacity: 55%;
+    white-space: pre-wrap;
+    color: rgba(42, 20, 5, 0.84);
+    margin: 1%;
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 180%;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: justify;
+    font-family: Luminari, fantasy;}
+
+#text1 {
+    background-color: navajowhite;
+    opacity: 55%;
+    white-space: pre-wrap;
+    color: rgba(42, 20, 5, 0.84);
+    margin: 1%;
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 180%;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: justify;
+    font-family: Luminari, fantasy;}
+
+#rules {
+    opacity: 55%;
+    background-color: navajowhite;
+    white-space: pre-wrap;
+    color: rgba(42, 20, 5, 0.84);
+    margin: 1%;
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 170%;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: justify;
+    font-family: Luminari, fantasy;}
+
+#ghostButton {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: Luminari, fantasy;
+    outline: none;
+    color: rgba(42, 20, 5, 0.84);
+    background-color: #e7c44c;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px #212020;
+}
+
+#ghostButton:hover {background-color: #e7c44c}
+
+#ghostButton:active {
+    background-color: #e7c44c;
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+}

@@ -1,0 +1,126 @@
+body {
+    background-image: url("/img/backgrounds/picture2.jpg");
+    background-size: 100%;
+    margin-right: 7%;
+    margin-left: 7%;
+}
+
+#namePage {
+    margin-top: 5%;
+    color: rgba(42, 20, 5, 0.84);
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 350%;
+    font-variant: small-caps;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center;
+    font-family: Bradley Hand, cursive;}
+
+#text {
+    white-space: pre-wrap;
+    color: rgba(42, 20, 5, 0.84);
+    text-shadow: 1px 1px 1px #e7c44c;
+    margin-top: 1%;
+    align: justify;
+    font-size: 180%;
+    font-style: italic;
+    font-weight: initial;
+    text-align: justify;
+    /*letter-spacing: 10px;*/
+    font-family: Luminari, fantasy;}
+
+#text1 {
+    white-space: pre-wrap;
+    color: rgba(42, 20, 5, 0.84);
+    text-shadow: 1px 1px 1px #e7c44c;
+    margin-top: 1%;
+    align: left;
+    font-size: 180%;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: justify;
+    font-family: Luminari, fantasy;}
+
+#pag1, #pag2, #pag3, #pagGh, #adminPg, #chatPg{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: Luminari, fantasy;
+    outline: none;
+    color: rgba(42, 20, 5, 0.84);
+    background-color: #e7c44c;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px #212020;
+}
+#randomLink {
+      display: inline-block;
+      margin: 2%;
+      padding: 15px 25px;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      font-style: oblique;
+      font-weight: bold;
+      font-family: Luminari, fantasy;
+      outline: none;
+      color: rgba(42, 20, 5, 0.84);
+      background-color: #e7c44c;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px #212020;
+  }
+#randomLink:hover {background-color: #e7c44c}
+
+#randomLink:active {
+    background-color: #e7c44c;
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+}
+
+* {
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.formLog {
+    max-width: 300px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 20px;
+    border: 10px solid transparent;
+    background-color: #bd975d;
+    opacity: 70%;
+}
+.form-row {
+    margin-bottom: 15px;
+    font-family: Bradley Hand, cursive;
+    color: #070707;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.form-row input[type="text"], .form-row input[type="password"], .form-row textarea {
+    width: 100%;
+    padding: 0 10px;
+    /*line-height: 35px;*/
+    border-width: 0;
+    outline: none;
+    background-color: white;
+    background-size: 8px 35px;
+    font-family: Bradley Hand, cursive;
+    color: #070707;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.form-row textarea {
+    background-attachment: local;
+    background-repeat: repeat;
+    resize: none;
+}

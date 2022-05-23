@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Page1</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/page1.css}" href="/css/page1.css"/>
+</head>
+<body>
+<p id="namePage"><strong><span class="loginName" sec:authentication="name"></span></strong></p>
+<div id="text"th:utext="#{label.plot1}"></div>
+<div id="rules" th:utext="#{label.rules}"></div>
+<div id="text1"th:utext="#{label.contin}"></div>
+<form action="/chatPage" method="post">
+    <button type="submit" name="img" value="p1_ava1.jpg"><img th:src="@{/img/avatar/p1_ava1.jpg}"  width="280" height="280"/></button>
+    <button type="submit" name="img" value="p1_ava2.jpg"><img th:src="@{/img/avatar/p1_ava2.jpg}"  width="280" height="280"/></button>
+    <button type="submit" name="img" value="p1_ava3.jpg"><img th:src="@{/img/avatar/p1_ava3.jpg}"  width="280" height="280"/></button>
+    <button type="submit" name="img" value="p1_ava4.jpg"><img th:src="@{/img/avatar/p1_ava4.jpg}"  width="280" height="280"/></button>
+    <button type="submit" name="img" value="p1_ava5.jpg"><img th:src="@{/img/avatar/p1_ava5.jpg}"  width="280" height="280"/></button>
+    <button type="submit" name="img" value="p1_ava6.jpg"><img th:src="@{/img/avatar/p1_ava6.jpg}"  width="280" height="280"/></button>
+    <button type="submit" name="img" value="p1_ava7.jpg"><img th:src="@{/img/avatar/p1_ava7.jpg}"  width="280" height="280"/></button>
+</form>
+</body>
+</html>

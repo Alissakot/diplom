@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" th:href="@{/css/chatPage.css}" href="/css/chatPage.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script th:href="@{/js/chatPage.js}" src="/js/chatPage.js"></script>
+<head>
+    <title>Chat</title>
+    </head>
+<body>
+
+<!--<div id="waitGame" class="panel" dis>-->
+<!--    <h1>Ожидайте начало игры</h1>-->
+<!--    <p>Подождите, пока наберется нужное количество игроков</p>-->
+<!--    <button class="waitGameButton" disabled>OK</button>-->
+<!--</div>-->
+
+<table id ="userTab">
+    <thead>
+    </thead>
+    <tbody>
+    <tr th:if="${users.empty}">
+        <td colspan="2"> No Users Available </td>
+    </tr>
+<!--    <td th:if="${users.size()==1}">-->
+        <td id = "timerCell">
+        <div id="timer" class="timer">
+            <div id ="timer_items" class="timer_items">
+                <div class="timer_item timer_minutes">00</div>
+                <div class="timer_item">:</div>
+                <div class="timer_item timer_seconds">00</div>
+            </div>
+        </div>
+    </td>
+    <td th:each="user : ${users}">
+    <table>
+        <tr><img id = "avatar" th:if="${user.image != null}" th:src="@{'/img/avatar/'+${user.image}}" class="round"/></tr>
+        <tr><h1 th:text="${user.login}"></h1></tr>
+        <tr>
+            <div sec:authorize="hasRole('ROLE_PLAYER1')" th:if="${user.login != login}">
+                    <button th:if="${user.role.name != 'GHOST'}" th:attr="onclick=|execute('${user.login}')|"  class="player1Panel" id="execButton" hidden>
+                        <img id ="executeButton" th:src="@{/img/buttons/buttonShoot.jpg}"></button>
+            </div>
+            <div sec:authorize="hasRole('ROLE_PLAYER2')" th:if="${user.login != login}">
+                <button th:if="${user.role.name != 'GHOST'} AND ${user.role.name != 'WEREWOLF'}"
+                        th:attr="onclick=|kill('${user.login}')|" class="player2Panel" hidden>
+                    <img id = "killButton" th:src="@{/img/buttons/buttonKill.jpg}"/></button>
+                <button th:if="${user.role.name != 'GHOST'} AND ${user.role.name != 'WEREWOLF'} AND ${user.role.name != 'PLAYER1'}"
+                        th:attr="onclick=|bite('${user.login}')|" class="player2Panel" hidden>
+                    <img id="biteButton" th:src="@{/img/buttons/buttonBite.jpg}"/></button>
+            </div>
+        </tr>
+    </table>
+    </td>
+    </tbody>
+</table>
+<table id="tableChats">
+<tr>
+    <td id = "commonChat">
+    <h1 id = "veche"> Вече </h1>
+    <input type = "text" id = "Group_no" value="common" hidden/>
+    <input type = "text" id = "login" th:value="${login}" hidden/>
+    <textarea rows="7" cols="30" id="content"></textarea><br>
+    <button id = "send" sec:authorize="hasAnyRole('ROLE_PLAYER2', 'ROLE_WEREWOLF', 'ROLE_ADMIN', 'ROLE_PLAYER1', 'ROLE_PLAYEROTHER')"
+           type = "submit" th:utext="#{label.send}" onclick = "start ()" /></td></button>
+
+    <td sec:authorize="hasAnyRole('ROLE_PLAYER2', 'ROLE_WEREWOLF', 'ROLE_ADMIN', 'ROLE_GHOST')" id = "chatWerewolves">
+    <h1 id = "coven"> Ковен </h1>
+    <input type = "text" id = "Group_noWerewolves" value="Werewolves" hidden/>
+    <input type = "text" id = "loginWerewolves" th:value="${login}" hidden/>
+    <textarea rows="3" cols="20" id="contentWerewolves"></textarea><br>
+    <button id = "sendW" sec:authorize="hasAnyRole('ROLE_PLAYER2', 'ROLE_WEREWOLF', 'ROLE_ADMIN')"
+           type = "submit" th:utext="#{label.send}" onclick = "startWerewolves ()" /></button>
+    </td>
+</tr>
+    <tr>
+        <td>
+            <div id="messages"></div>
+        </td>
+        <td sec:authorize="hasAnyRole('ROLE_PLAYER2', 'ROLE_WEREWOLF', 'ROLE_ADMIN', 'ROLE_GHOST')">
+            <div id="messagesWerewolves"></div>
+        </td>
+    </tr>
+</table>
+</body>
+<script th:inline="javascript">
+    var isDay = [[${isDay}]];
+    var dayNumber = [[${dayNumber}]];
+    if (dayNumber == 0) {
+        changeBg('/img/backgrounds/picture9.jpg', dayNumber);
+    } else if (isDay) {
+        changeBg('/img/backgrounds/picture5.jpg', dayNumber);
+    } else {
+        changeBg('/img/backgrounds/picture6.jpg', dayNumber);
+    }
+    if (dayNumber > 0) {
+        startTimer();
+    }
+</script>
+</html>

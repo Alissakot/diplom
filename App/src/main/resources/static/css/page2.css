@@ -1,0 +1,53 @@
+body {
+    background-image: url("/img/backgrounds/picture4.jpg");
+    background-size: 100%;
+}
+#namePage {
+    text-transform: capitalize;
+    color: rgba(42, 20, 5, 0.84);
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 350%;
+    font-variant: small-caps;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center;
+    font-family: Bradley Hand, cursive;}
+
+#text {
+    background-color: navajowhite;
+    opacity: 55%;
+    white-space: pre-wrap;
+    color: rgba(42, 20, 5, 0.84);
+    margin: 1%;
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 180%;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: justify;
+    font-family: Luminari, fantasy;}
+
+#text1 {
+    background-color: navajowhite;
+    opacity: 55%;
+    white-space: pre-wrap;
+    color: rgba(42, 20, 5, 0.84);
+    margin: 1%;
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 180%;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: justify;
+    font-family: Luminari, fantasy;}
+
+#rules {
+    opacity: 55%;
+    background-color: navajowhite;
+    white-space: pre-wrap;
+    color: rgba(42, 20, 5, 0.84);
+    margin: 1%;
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 170%;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: justify;
+    font-family: Luminari, fantasy;}

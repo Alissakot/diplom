@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Main page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/mainPage.css}" href="/css/mainPage.css."/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="loginPanel" sec:authorize="isAuthenticated()">
+    <span class="loginName" sec:authentication="name"></span>
+    <div class="logoutButton">
+        <a th:href="@{/logout}" href="/logout">Выйти</a>
+    </div>
+</div>
+<p id="namePage"><strong th:utext="#{label.welcome}"></strong></p>
+<div id="text" th:utext="#{label.welcomeText}"></div>
+<div id="text1" th:utext="#{label.begin}"> </div>
+
+<form action="/registration" method="post" class="formLog">
+    <div class="form-row">
+        <label for="nameForm" th:utext="#{label.userName}"/><input type="text" id="nameForm" name="login" required>
+    </div>
+    <div class="form-row">
+        <label for="passwordForm" th:utext="#{label.password}"/><input type="password" id="passwordForm" name="password" required>
+    </div>
+    <div class="form-row">
+        <button type="submit" value="" id="randomLink" th:utext="#{label.start}"></button>
+    </div>
+</form>
+<ul sec:authorize="hasRole('ROLE_ADMIN')">
+    <a id="pag1" th:href="@{/page1}" href="pages/page1.html">стр1</a>
+    <a id="pag2" th:href="@{/page2}" href="pages/page2.html">стр2</a>
+    <a id="pag3" th:href="@{/page3}" href="pages/page3.html">стр3</a>
+    <a id="pagGh" th:href="@{/pageGhost}" href="pages/pageGhost.html">призрак</a>
+    <a id="adminPg" th:href="@{/adminPage}" href="pages/adminPage.html">админ</a>
+    <a id="chatPg" th:href="@{/chatPage}" href="pages/chatPage.html">игра</a>
+</ul>
+</body>
+</html>

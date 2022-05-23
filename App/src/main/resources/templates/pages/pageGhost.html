@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" type="text/css" th:href="@{/css/pageGhost.css}" href="/css/pageGhost.css."/>
+<head>
+    <meta charset="UTF-8">
+    <title>Страница призрака</title>
+    <p id="namePage"><strong><span class="loginName" sec:authentication="name", призрак></span></strong></p>
+</head>
+<body>
+    <div id="text" th:utext="#{label.plot4}"></div>
+    <div id="rules" th:utext="#{label.rules}"></div>
+    <form action="/chatPage" method="post">
+        <button type="submit" id="ghostButton" value="" th:utext="#{label.ghostButton}"></button>
+    </form>
+</body>
+</html>

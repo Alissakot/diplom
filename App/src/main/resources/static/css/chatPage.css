@@ -1,0 +1,217 @@
+
+body {
+    background-image: url("/img/backgrounds/picture5.jpg");
+    background-size: 100%;
+}
+#avatar {
+    border-radius: 100px; /* Радиус скругления */
+    border: 3px solid green; /* Параметры рамки */
+    box-shadow: 0 0 7px #666; /* Параметры тени */
+}
+#avatar{
+    width: 200px;
+    height: 200px;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
+}
+#avatar:hover{
+    width: 400px;
+    height: 400px;
+}
+
+#userTab{
+    table-layout: auto; /* Фиксированная ширина ячеек */
+    width: 100%; /* Ширина таблицы */
+    text-align: initial;
+    font-size: 100%;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: Luminari, fantasy;
+    color: rgba(42, 20, 5, 0.84);
+    text-shadow: 1px 1px 1px #e7c44c;
+}
+
+/*#executeButton{*/
+/*    background-image: url("/img/buttons/buttonBite.jpg");*/
+/*    background-size: 40px 40px;*/
+/*    opacity: 40%;*/
+/*    border-radius: 100px;*/
+/*    background-repeat : no-repeat;*/
+/*    background-border: 3px solid green;*/
+/*    background-box-shadow: 0 0 7px #666;*/
+/*    display: block;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*}*/
+
+#timerCell{
+    width: 200px;
+}
+
+#killButton, #biteButton, #executeButton{
+
+    /*padding-left : 32px;*/
+    /*padding-top : 10px;*/
+    /*padding-bottom : 10px;*/
+    background-repeat : no-repeat;
+    border-radius: 100px;
+    border: 3px solid green;
+    box-shadow: 0 0 7px #666;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*opacity: 40%;*/
+    width: 40px;
+    height: 40px;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+#namePage {
+    color: rgba(42, 20, 5, 0.84);
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 350%;
+    font-variant: small-caps;
+    font-style
+    : italic;
+    font-weight: bolder;
+    text-align: center;
+    font-family: Bradley Hand, cursive;}
+
+#text, #coven, #veche {
+    color: rgba(42, 20, 5, 0.84);
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 200%;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: justify;
+    font-family: Luminari, fantasy;}
+
+#send, #sendW{
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(255,255,255,.2), 0 -1px rgba(0,0,0,.8);
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    background: rgb(28,107,114) radial-gradient(150% 100% at 50% 5px, rgba(255,255,255,.2), rgba(0,0,0,0));
+    box-shadow: inset rgba(0,0,0,.6) 0 -2px 5px, inset rgba(252,255,255,.7) 0 2px 5px, rgba(0,0,0,.8) 0 2px 5px -1px;
+    color: rgb(0,79,86);
+    user-select: none;
+}
+#send:hover, #sendW:hover {
+    color: rgb(0,59,66);
+    cursor: pointer;
+}
+#send:active, #sendW:active {
+    padding-bottom: 1px;
+    box-shadow:
+            inset rgba(0,0,0,1) 0 1px 3px,
+            inset rgba(0,0,0,.6) 0 -2px 5px,
+            inset rgba(252,255,255,.7) 0 2px 5px,
+            0 1px rgba(255,255,255,.08);
+    color: rgb(128,207,214);
+}
+
+#timer_items {
+    vertical-align: top;
+    display: flex;
+    font-size: 48px;
+    text-align: right;
+    color: #730101;
+    text-shadow: -1px -1px white, 1px 1px gray, 2px 2px #7a7a7a, 3px 3px #757575, 4px 4px #707070, 5px 5px #6b6b6b, 6px 6px #666666, 7px 7px #616161, 8px 8px #5c5c5c, 9px 9px #575757, 10px 10px #525252, 11px 11px #4d4d4d, 18px 18px 30px rgba(0, 0, 0, .4), 18px 18px 10px rgba(0, 0, 0, .4);
+}
+
+#timer {
+    vertical-align: top;
+    position: relative;
+    min-width: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 30px;
+    color: #730101;
+    text-shadow: -1px -1px white, 1px 1px gray, 2px 2px #7a7a7a, 3px 3px #757575, 4px 4px #707070, 5px 5px #6b6b6b, 6px 6px #666666, 7px 7px #616161, 8px 8px #5c5c5c, 9px 9px #575757, 10px 10px #525252, 11px 11px #4d4d4d, 18px 18px 30px rgba(0, 0, 0, .4), 18px 18px 10px rgba(0, 0, 0, .4);
+}
+#messages {
+    width: 50%;
+    background-color: navajowhite;
+    background-size: 50% auto;
+    border-radius: 3px;
+    color: rgba(42, 20, 5, 0.84);
+    font-family: Luminari, fantasy;
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 150%;
+    opacity: 50%;
+}
+#content{
+    width:300px; height:150px;
+    background-color: #fdf5e8;
+    border-radius: 3px;
+    color: rgba(42, 20, 5, 0.84);
+    font-family: Luminari, fantasy;
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 150%;
+    opacity: 70%;
+}
+
+#messagesWerewolves{
+    width: 30%;
+    background-color: #72faff;
+    background-size: 50% auto;
+    border-radius: 3px;
+    color: rgba(42, 20, 5, 0.84);
+    font-family: Luminari, fantasy;
+    text-shadow: 1px 1px 1px #e7c44c;
+    font-size: 150%;
+    opacity: 50%;
+}
+#contentWerewolves{
+    width:300px; height:150px;
+    background-color: #fdf5e8;
+    border-radius: 3px;
+    color: rgb(94, 4, 4);
+    font-family: Luminari, fantasy;
+    text-shadow: 1px 1px 1px #212020;
+    font-size: 150%;
+    opacity: 70%;
+}
+
+#tableChats {
+    table-layout: auto; /* Фиксированная ширина ячеек */
+    width: 100%; /* Ширина таблицы */
+}
+/*#commonChat #nickname {*/
+/*    color: #460101 !important;*/
+/*    font-weight: bold;*/
+/*    font-family: Luminari, fantasy;*/
+/*    font-size: medium !important;*/
+/*    line-height: 150% !important;*/
+/*}*/
+/*#commonChat #login::after {*/
+/*    content: ":";*/
+/*}*/
+/*#timer_item::before {*/
+/*    content: attr(data-title);*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    bottom: 0;*/
+/*    transform: translateX(-50%);*/
+/*    font-size: 14px;*/
+/*}*/
+
+/*#timer_item:not(:last-child)::after {*/
+/*    content: ':';*/
+/*    position: absolute;*/
+/*    right: -15px;}*/
